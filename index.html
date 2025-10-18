@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article data-testid="test-profile-card" class="profile-card">
+            <figure class="avatar">
+                <img
+                    src="image/myImage.jpg"
+                    alt="User avatar"
+                    data-testid="test-user-avatar"
+                    id="user-avatar"
+                />
+                <figcaption>
+                    <label for="avatar-upload" class="upload-label">Change Avatar</label>
+                    <input
+                        type="file"
+                        id="avatar-upload"
+                        accept="image/*"
+                        aria-label="Upload new avatar"
+                        hidden
+                    />
+                </figcaption>
+            </figure>
+
+            <section class="info">
+                <header>
+                <h2 data-testid="test-user-name">Chukaorjioha Chinemeze Matthias</h2>
+                </header>
+
+                <p data-testid="test-user-bio">
+                <b>Frontend Web Developer</b>
+                </p>
+                <p data-testid="test-user-bio">
+                Building modern, responsive, and user-friendly web interfaces with a focus on clean code, accessibility, and performance. 
+                Passionate about creating seamless digital experiences using HTML, CSS, JavaScript, and React.
+                </p>
+
+                <p class="time">
+                Current Time (ms): 
+                <span data-testid="test-user-time" id="user-time"></span>
+                </p>
+
+                <nav aria-label="Social media links">
+                    <ul data-testid="test-user-social-links" class="social-links">
+                        <li>
+                            <a
+                                href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-twitter"
+                            >Twitter</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-github"
+                            >GitHub</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-linkedin"
+                            >LinkedIn</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <h3>Hobbies</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Coding</li>
+                        <li>Reading tech blogs</li>
+                        <li>Playing football and video games</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Dislikes</h3>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Slow internet</li>
+                        <li>Messy code</li>
+                        <li>Unclear documentation</li>
+                    </ul>
+                </section>
+            </section>
+        </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

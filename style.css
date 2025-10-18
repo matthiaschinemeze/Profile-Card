@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e10;
+    color: #e4e4e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* PROFILE CARD */
+.profile-card {
+    background: #1c1c21;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    max-width: 850px;
+    width: 90%;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+/* AVATAR */
+.avatar {
+    flex-shrink: 0;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.avatar img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5% 5% 40% 5%;
+    border: 3px solid #2f2f36;
+}
+.upload-label {
+    display: inline-block;
+    margin-top: 10px;
+    background: #2a2a30;
+    color: #e4e4e7;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.upload-label:hover {
+    background: #3a3a42;
+}
+/* INFO SECTION */
+.info {
+    padding: 25px;
+    flex: 1;
+}
+h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #c9c9d3;
+}
+.time {
+    font-size: 0.9rem;
+    color: #9a9aa1;
+    background: #2a2a30;
+    padding: 6px 10px;
+    display: inline-block;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+/* SOCIAL LINKS */
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 25px;
+}
+.social-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    background: #26262c;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.social-links a:hover {
+    background: #3a3a42;
+    transform: translateY(-2px);
+}
+/* LIST SECTIONS */
+section h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+section ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #c5c5cc;
+}
+section ul li {
+    margin-bottom: 4px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+body {
+    height: auto;
+    padding: 20px;
+}
+.profile-card {
+    flex-direction: column;
+    text-align: center;
+}
+.avatar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.upload-label {
+    margin-bottom: 13px;
+}
+.info {
+    padding: 20px;
+}
+.social-links {
+    justify-content: center;
+}
+section ul {
+    list-style: none;
+    padding: 0;
+}
+}
