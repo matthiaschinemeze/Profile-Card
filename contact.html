@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Contact Us</h1>
+        <form id="contactForm" novalidate aria-label="Contact Form">
+            <div>
+                <label for="name">Full Name</label>
+                <input id="name" data-testid="test-contact-name" type="text" aria-describedby="error-name" required />
+                <p id="error-name" class="error" data-testid="test-contact-error-name"></p>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" data-testid="test-contact-email" type="email" aria-describedby="error-email" required />
+                <p id="error-email" class="error" data-testid="test-contact-error-email"></p>
+            </div>
+
+            <div>
+                <label for="subject">Subject</label>
+                <input id="subject" data-testid="test-contact-subject" type="text" aria-describedby="error-subject" required />
+                <p id="error-subject" class="error" data-testid="test-contact-error-subject"></p>
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" data-testid="test-contact-message" rows="5" aria-describedby="error-message" required></textarea>
+                <p id="error-message" class="error" data-testid="test-contact-error-message"></p>
+            </div>
+
+            <button data-testid="test-contact-submit">Submit</button>
+            <p class="success" id="successMsg" data-testid="test-contact-success" hidden>
+                Thank you! Your message has been sent successfully.
+            </p>
+        </form>
+
+        <nav aria-label="Main navigation" class="main-nav contact-page">
+            <ul>
+                <li><a href="index.html" class="active">Profile</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
